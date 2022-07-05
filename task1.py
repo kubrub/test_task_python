@@ -1,11 +1,9 @@
-from pathlib import Path
+import os
 
 
 def task1_create_full_path_of_directories(path):
-    ssh = Path(path)
     try:
-        ssh.mkdir(parents=True)
-    except OSError:
-        print(False)
-    else:
-        print(True)
+        os.makedirs(path, exist_ok=True)
+        return True
+    except OSError as error:
+        return False
