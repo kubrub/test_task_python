@@ -9,9 +9,9 @@ def task2(title_format, text_format, file_path):
                 line = line.strip()
                 string = "AEWI "
                 if line.find(title_format) == -1:
-                    return "Title format not found"
+                    return "Sorry, title format not found, please, try one more time"
                 elif string.find(text_format) == -1:
-                    return "Text format not found"
+                    return "Sorry, text format not found, please, try one more time"
                 elif line.find(title_format) != -1 and line[0] == title_format[0] and (
                         text_format == 'A' or text_format == ''):
                     res = {'msg': line[0:9],
@@ -28,4 +28,4 @@ def task2(title_format, text_format, file_path):
                     arr_res.append(res)
             return arr_res
     except EnvironmentError:
-        return "File not found"
+        return "Sorry, file not found, please, try one more time"
