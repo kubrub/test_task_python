@@ -100,7 +100,7 @@ def main():
         elif choice == 4:
             example_task1()
             path = input("Input path to create - ")
-            task1.task1_create_full_path_of_directories(path)
+            print(task1.task1_create_full_path_of_directories(path))
         elif choice == 5:
             info_task_2_types_message()
             example_task2()
