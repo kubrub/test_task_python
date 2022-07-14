@@ -13,8 +13,8 @@ def example_task1():
 def example_task2():
     print()
     print("~~~Input example for task 2~~~")
-    print("Input example for title format = MVF")
-    print("Input example for text format = A")
+    print("Input example for title format = A")
+    print("Input example for text format = MVF")
     print("Input example for file path = D:\Projects\python_test_task\our_file.txt")
     print()
 
