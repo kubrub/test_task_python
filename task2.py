@@ -2,10 +2,13 @@ import re
 
 
 def check(file_path, txt):
-    with open(file_path) as dataf:
-        return any(txt in line for line in dataf)
+    try:
+        with open(file_path) as dataf:
+            return any(txt in line for line in dataf)
+    except EnvironmentError:
+        return "Sorry, file not found, please, try one more time"
 
-
+    
 def task2(title_format, text_format, file_path):
     try:
         with open(file_path, 'r') as fp:
